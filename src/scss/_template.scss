@@ -1,0 +1,142 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: $white;
+    color: $black;
+    font-family: $mainF;
+    
+    
+    &, * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.header
+.footer {
+    flex: 0 0 auto;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    padding: 0 20px;
+}
+
+section {
+
+    &:nth-child(odd) {
+        background-color: $red;
+    }
+
+    @include respond-to(desktop) {
+        min-height: 100vh;
+    }
+}
+
+article, 
+.article {
+    max-width: 970px;
+    width: 100%;
+    margin: auto;
+}
+
+a, input, button, textarea {
+    text-decoration: none;
+    outline: none;
+}
+
+button {
+    background-color: transparent;
+    border: 0;
+}
+
+.article {
+
+    &-date {
+    
+    }
+    &-views {
+      &::before {
+          content: '';
+          display: block;
+          float: left;
+          width: 20px; 
+          height: 10px;
+          background-image: url('/images/icon-sprite.png');
+          background-position-x: 95px;
+          background-position-y: 65px;
+          top: 5px;
+          position: relative;
+          margin: 0 8px;
+      }  
+    }
+}
+
+.title {
+    color: $black;
+    font-family: $mainF;
+    margin: 20px 0;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.2em;
+
+    &::after {
+        content: '';
+        clear: both;
+        display: block;
+    }
+    @include respond-to(wide-mobile-landscape) {
+        font-size: 32px;
+    }
+    @include respond-to(wide-mobile) {
+        font-size: 32px;
+    }
+    @include respond-to(mobile) {
+        font-size: 32px;
+    }
+    @include respond-to(small-mobile) {
+        font-size: 32px;
+    }
+}
+
+.content-text {
+    max-width: 715px;
+    width: 100%;
+    margin: auto;
+    font-family: $contentText;
+    font-size: 20px;
+    line-height: 1.4em;
+}
+
+blockquote {
+    text-indent: 17px;
+    font-style: italic;
+    margin: 25px 0;
+    display: block;
+
+    .normal {
+        font-style: normal;
+    }
+}
+
+i {
+    font-style: italic;
+}
+
+
+

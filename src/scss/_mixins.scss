@@ -1,0 +1,39 @@
+@mixin respond-to($media) {
+  @if $media == mobile {
+    @media only screen and (max-width: 420px) and (min-width: 391px) {
+      @content;
+    }
+  } @else if $media == small-mobile {
+    @media only screen and (min-width: 300px) and (max-width: 390px) {
+      @content;
+    }
+  } @else if $media == wide-mobile {
+    @media only screen and (min-width: 421px) and (max-width: 570px) {
+      @content;
+    }
+  } @else if $media == wide-mobile-landscape {
+    @media only screen and (min-width: 480px) and (max-width: 820px) and (orientation: landscape) {
+      @content;
+    }
+  } @else if $media == tablets {
+    @media only screen and (min-width: 768px) and (max-width: 959px) {
+      @content;
+    }
+  } @else if $media == wide-tablets {
+    @media only screen and (min-width: 960px) and (max-width: 1024px) {
+      @content;
+    }
+  } @else if $media == small-desktop {
+    @media only screen and (min-width: 1025px) and (max-width: 1200px) {
+      @content;
+    }
+  } @else if $media ==desktop {
+    @media only screen and (min-width: 1201px) {
+      @content;
+    }   
+  }  @else if $media==smallest {
+    @media only screen and (max-width: 1023px) {
+      @content;
+    }
+  }
+}
